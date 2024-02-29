@@ -12,30 +12,50 @@ $(document).ready(function () {
 
         if(name == "") {
             $('input[name="user_fio"]').addClass("invalid-input");
+            $('#hint-name').css("display","block");
+            $('#hint-name').css("margin-top","-10px");
             validName = false;
         } else {
             $('input[name="user_fio"]').removeClass("invalid-input");
+            $('#hint-name').css("display","none");
             validName = true;
         }
         if(address == "") {
             $('input[name="user_address"]').addClass("invalid-input");
+            $('#hint-address').css("display","block");
+            $('#hint-address').css("margin-top","-10px");
             validAddress = false;
         } else {
             $('input[name="user_address"]').removeClass("invalid-input");
+            $('#hint-address').css("display","none");
             validAddress = true;
         }
         if(phone == "" || phone.length != 15) {
             $('input[name="user_phone"]').addClass("invalid-input");
+            $('#hint-phone').css("display","block");
+            $('#hint-phone').css("margin-top","-10px");
             validPhone = false
         } else {
             $('input[name="user_phone"]').removeClass("invalid-input");
+            $('#hint-phone').css("display","none");
             validPhone = true;
         }
-        if((email == "") || (email.search(pattern) != 0)) {
+        if(email == "") {
             $('input[name="user_email"]').addClass("invalid-input");
+            $('#hint-email-invalid').css("display","none");
+            $('#hint-email').css("display","block");
+            $('#hint-email').css("margin-top","-10px");
+            validEmail = false;
+        } else if (email.search(pattern) != 0) {
+            $('input[name="user_email"]').addClass("invalid-input");
+            $('#hint-email').css("display","none");
+            $('#hint-email-invalid').css("display","block");
+            $('#hint-email-invalid').css("margin-top","-10px");
             validEmail = false;
         } else {
             $('input[name="user_email"]').removeClass("invalid-input");
+            $('#hint-email').css("display","none");
+            $('#hint-email-invalid').css("display","none");
             validEmail = true;
         }
         if (validName && validPhone && validAddress && validEmail) {

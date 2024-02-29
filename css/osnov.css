@@ -111,7 +111,7 @@ footer{
 }
 .form-holder .invalid-input{
   border: #be1116;
-  box-shadow: 0 0px 20px rgba(205, 9, 9, 0.35);
+  box-shadow: 0 0px 20px rgba(205, 9, 9, 0.15);
 }
 .form-holder .form-field-name{
   height: 25px;
@@ -164,6 +164,13 @@ footer{
 }
 .form-contact-info .even{
   background-color: white;
+}
+.hint-visible{
+  margin-top: -10px;
+  display: block;
+}
+.hint-invisible{
+  display: none;
 }
 @media (min-width:481px) and (max-width:1280px){
   .form-holder{

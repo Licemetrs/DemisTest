@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="/css/osnov.css">
     </head>
     <body>
-        <header></header>
         <div class = "main">
             <div class = "news-holder">
                 <?foreach ($pageData["news"] as $news) :?>
@@ -19,6 +18,5 @@
                 <?endforeach?>
             </div>
         </div>
-        <footer></footer>
     </body>
 </html>

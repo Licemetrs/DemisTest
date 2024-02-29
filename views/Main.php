@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="/css/osnov.css">
     </head>
     <body>
-        <header></header>
         <div class = "main">
             <div class = "news-holder">
             <?foreach ($pageData["news_first"] as $news_f) :?>
@@ -30,6 +29,5 @@
                 <a href = "/contact" class = "menu-button">Обратная связь</a>
             </div>
         </div>
-        <footer></footer>
     </body>
 </html>
