@@ -14,7 +14,6 @@ class Router{
         while($i>0){
             if ($route[$i] != ''){
                 if(is_file(CONTROLLER_PATH . ucfirst($route[$i]) . "Controller.php") || !empty($_GET)){
-                    //if($route[$i] == "Controller") {break;}
                     $controllerName = ucfirst($route[$i]) . "Controller.php";
                     $modelName = ucfirst($route[$i]) . "Model.php";
                     break;
@@ -36,10 +35,7 @@ class Router{
         if(isset($route[2]) && $route[2] !=''){
             $action = $route[2];
         }
-
-        // include_once CONTROLLER_PATH . $controllerName . ".php";
-        // include_once MODEL_PATH . $modelName . ".php";
-
+        
         $controller = new $controllerName();
         $controller->$action();
 

@@ -149,7 +149,8 @@ footer{
   grid-template-columns: max-content minmax(auto, auto);
   border: solid 2px black;
   word-break: break-all;
-  font-family: -apple-system, BlinkMacSystemFont, Arial, "Helvetica Neue", Helvetica, sans-serif;;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 25px;
 }
 .form-contact-info .form-field-name,
 .form-contact-info .form-field-input{
@@ -164,12 +165,23 @@ footer{
 .form-contact-info .even{
   background-color: white;
 }
+@media (min-width:481px) and (max-width:1280px){
+  .form-holder{
+    width: 75%;
+    left: 14.5%;
+  }
+  .form-contact-info{
+    max-width: 75%;
+    grid-template-columns: minmax(auto, auto) minmax(auto, auto);
+  }
+}
 @media (max-width: 480px ) {
   .form-holder{
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
+    transform: none;
   }
   .form-contact-info{
     width: 100%;
@@ -177,6 +189,7 @@ footer{
     left: 0;
     top: 8%;
     grid-template-columns: max-content 1fr;
+    font-size: 20px;
   }
   .form-contact-info .form-field-name,
   .form-contact-info .form-field-input{

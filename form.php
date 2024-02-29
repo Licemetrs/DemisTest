@@ -13,6 +13,18 @@ class FormModel extends Model {
     $stmt->bindValue(":email", $_POST["user_email"], PDO::PARAM_STR);
     $stmt->execute();
     }
+    public function getInfo(){
+        $sql = "SELECT name,address,phone,email FROM contact";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $res[] = $row;
+        }
+        return $res;
+    }
 }
 $form = new FormModel;
 $form->sendForm();
+
+echo json_encode($form->getInfo());

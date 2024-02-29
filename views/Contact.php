@@ -20,14 +20,14 @@
                 <input type = "submit" value = "ОТПРАВИТЬ" class = "form-field" id = "submit-button">
             </form>
             <div class = "form-contact-info">
-                <div class = "form-field form-field-name odd">ФИО</div>
+                <!-- <div class = "form-field form-field-name odd">ФИО</div>
                 <div class = "form-field form-field-input odd" id ="name"></div>
                 <div class = "form-field form-field-name even">Адрес</div>
                 <div class = "form-field form-field-input even" id = "address"></div>
                 <div class = "form-field form-field-name odd">Номер телефона</div>
                 <div class = "form-field form-field-input odd" id = "phone"></div>
                 <div class = "form-field form-field-name even">E-mail</div>
-                <div class = "form-field form-field-input even" id = "email"></div>
+                <div class = "form-field form-field-input even" id = "email"></div> -->
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
